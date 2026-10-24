@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="NAR Digital Growth Agency — layanan social media management, engagement, digital marketing, dan content creation.">
+<title>NAR — Digital Growth Agency</title>
+<style>
+:root{
+  --bg:#050817;--panel:rgba(12,22,48,.72);--line:rgba(82,145,255,.27);
+  --text:#f5f7ff;--muted:#aab7d4;--purple:#9b4dff;--blue:#397bff;--cyan:#42e5ff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:86px}
+body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+.wrap{width:min(1160px,calc(100% - 44px));margin:auto}
+.site-bg{position:fixed;inset:0;z-index:-3;pointer-events:none;overflow:hidden;background:radial-gradient(ellipse at 77% 18%,rgba(18,76,187,.28),transparent 38%),radial-gradient(ellipse at 7% 72%,rgba(109,25,219,.18),transparent 33%),#050817}
+.site-bg:before,.site-bg:after{content:"";position:absolute;width:55vw;height:55vw;border:1px solid rgba(65,124,255,.15);border-radius:50%;filter:blur(1px);animation:orbit 22s linear infinite}
+.site-bg:before{right:-25vw;top:8vh;box-shadow:0 0 80px rgba(48,91,255,.08),inset 0 0 70px rgba(120,45,255,.08)}
+.site-bg:after{left:-37vw;bottom:-35vh;width:75vw;height:75vw;border-color:rgba(177,60,255,.13);animation-direction:reverse}
+.aurora{position:fixed;z-index:-2;inset:-20%;pointer-events:none;background:conic-gradient(from 180deg at 50% 50%,transparent 0 18%,rgba(42,96,255,.08) 24%,transparent 31%,rgba(182,44,255,.07) 42%,transparent 50%);filter:blur(40px);animation:aurora 18s ease-in-out infinite alternate}
+header{position:sticky;top:0;z-index:50;background:rgba(5,8,23,.72);backdrop-filter:blur(18px);border-bottom:1px solid rgba(115,151,255,.12)}
+.nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+.logo{display:inline-flex;align-items:center;gap:10px;font-weight:950;font-size:29px;letter-spacing:-2px}
+.logo-mark{width:42px;height:42px;display:grid;place-items:center;border-radius:13px;background:linear-gradient(135deg,var(--purple),#586dff 55%,var(--cyan));box-shadow:0 0 28px #6c43ff40;color:#fff;font-size:23px;letter-spacing:-2px;transform:skew(-7deg)}
+.logo span:last-child{background:linear-gradient(100deg,#fff 15%,#b5a2ff 52%,#4ce7ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.nav-links{display:flex;gap:30px;align-items:center;color:#d5def4;font-size:13px}
+.nav-links a{transition:color .25s}.nav-links a:hover{color:var(--cyan)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 20px;border-radius:999px;font-size:13px;font-weight:750;border:1px solid transparent;transition:transform .25s,box-shadow .25s;cursor:pointer}
+.btn:hover{transform:translateY(-3px);box-shadow:0 12px 30px #5b48ff35}
+.btn-primary{background:linear-gradient(105deg,#8d32ff,#497cff 62%,#3fe1f5);color:white;box-shadow:0 8px 28px #6b44ff35}
+.btn-ghost{border-color:rgba(188,205,255,.35);background:rgba(255,255,255,.025)}
+.menu-toggle{display:none;background:none;color:white;border:1px solid var(--line);border-radius:10px;padding:9px}
+.hero{min-height:690px;display:grid;grid-template-columns:1.02fr .98fr;align-items:center;gap:30px;padding:70px 0 78px;position:relative}
+.hero-copy{position:relative;z-index:2}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(101,137,255,.32);background:rgba(20,33,73,.55);padding:9px 13px;border-radius:999px;color:#c9d7ff;font-size:12px;margin-bottom:23px}
+.pulse{width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 13px var(--cyan);animation:pulse 1.6s infinite}
+h1{font-size:clamp(42px,5.1vw,67px);line-height:1.04;letter-spacing:-3.4px;max-width:660px}
+.gradient-text{background:linear-gradient(95deg,#b96cff 3%,#7887ff 48%,#45e5ff 94%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-copy p{color:var(--muted);font-size:15px;line-height:1.85;max-width:550px;margin:23px 0 27px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.proof{display:flex;align-items:center;gap:15px;margin-top:38px;color:#cbd5ec;font-size:12px}
+.avatars{display:flex;padding-left:4px}
+.avatar{width:31px;height:31px;margin-left:-5px;border-radius:50%;display:grid;place-items:center;border:2px solid #111a35;background:linear-gradient(145deg,#bd6cff,#2669b9);font-size:10px}
+.proof strong{color:#fff}.stars{color:#ffd45e;letter-spacing:2px;margin-top:3px}
+.visual{min-height:470px;position:relative;display:grid;place-items:center;perspective:1000px}
+.glow-orb{position:absolute;width:370px;height:370px;border-radius:50%;background:radial-gradient(circle,rgba(47,115,255,.26),rgba(139,41,255,.12) 43%,transparent 70%);filter:blur(10px);animation:float 7s ease-in-out infinite}
+.phone{position:relative;width:225px;height:410px;border-radius:36px;padding:10px;background:linear-gradient(135deg,#9c6aff,#101a40 25%,#10182f 70%,#48dcff);box-shadow:0 0 0 2px #9b9eff70,0 30px 80px #2c67ff50;transform:rotate(7deg);animation:phoneFloat 6s ease-in-out infinite}
+.phone-inner{height:100%;border-radius:28px;background:radial-gradient(ellipse at 80% 0%,#243d83,#071024 56%);border:1px solid #8da5ff38;padding:26px 16px;display:flex;flex-direction:column;align-items:center;text-align:center;overflow:hidden}
+.notch{position:absolute;top:14px;left:50%;transform:translateX(-50%);width:76px;height:17px;background:#030817;border-radius:0 0 13px 13px;z-index:2}
+.phone-logo{font-size:49px;font-weight:950;letter-spacing:-6px;margin-top:52px;background:linear-gradient(100deg,#c27aff,#fff 50%,#42e6ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.phone-tag{font-size:11px;color:#c0cce8;margin-top:5px;line-height:1.6}
+.mini-stat{width:100%;margin-top:25px;padding:13px;border:1px solid #718cff45;background:#17244b80;border-radius:15px;text-align:left}
+.mini-stat small{color:#b4c5eb;font-size:10px}.mini-stat strong{display:block;font-size:23px;margin-top:4px}.up{font-size:11px;color:#55f4c0}
+.phone-bars{height:40px;display:flex;align-items:end;gap:5px;margin-top:13px}
+.phone-bars i{display:block;width:14px;border-radius:4px 4px 1px 1px;background:linear-gradient(#4ce9ff,#8050ff);animation:bars 1.6s ease-in-out infinite alternate}
+.phone-bars i:nth-child(1){height:12px}.phone-bars i:nth-child(2){height:20px;animation-delay:.2s}.phone-bars i:nth-child(3){height:17px;animation-delay:.4s}.phone-bars i:nth-child(4){height:29px;animation-delay:.6s}.phone-bars i:nth-child(5){height:36px;animation-delay:.8s}
+.float-icon{position:absolute;width:62px;height:62px;border:1px solid #8ba5ff55;border-radius:19px;display:grid;place-items:center;font-size:27px;background:linear-gradient(145deg,#222c65dd,#11152bdd);box-shadow:0 12px 35px #142f8e55;animation:float 5s ease-in-out infinite}
+.float-icon.one{top:40px;left:12%;transform:rotate(-12deg)}.float-icon.two{top:70px;right:7%;animation-delay:-1s}.float-icon.three{bottom:78px;left:8%;animation-delay:-2s}.float-icon.four{bottom:95px;right:9%;animation-delay:-3s}
+.stat-card{position:absolute;padding:15px 17px;border:1px solid #7793ff55;background:rgba(9,18,43,.83);backdrop-filter:blur(14px);border-radius:16px;box-shadow:0 18px 50px #0005;animation:float 6s ease-in-out infinite}
+.stat-card strong{font-size:22px;display:block;margin-top:4px}.stat-card small{font-size:10px;color:#b9c8e8}.stat-card.left{left:-2%;top:42%;animation-delay:-2s}.stat-card.right{right:-2%;bottom:15%;animation-delay:-4s}
+.section{padding:92px 0;position:relative}
+.section-head{text-align:center;max-width:660px;margin:0 auto 40px}
+.kicker{color:var(--cyan);font-size:11px;font-weight:800;letter-spacing:3px;text-transform:uppercase}
+h2{font-size:clamp(30px,4vw,44px);letter-spacing:-1.6px;line-height:1.15;margin:13px 0}
+.section-head p{color:var(--muted);font-size:14px;line-height:1.8}
+.services{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.service-card{position:relative;overflow:hidden;padding:25px 22px 23px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(145deg,rgba(16,28,58,.83),rgba(7,13,31,.8));min-height:230px;transition:transform .35s,border-color .35s,background .35s}
+.service-card:before{content:"";position:absolute;width:150px;height:150px;right:-80px;top:-85px;border-radius:50%;background:#6c43ff35;filter:blur(15px);transition:transform .4s}
+.service-card:hover{transform:translateY(-8px);border-color:#6d9aff9c;background:linear-gradient(145deg,rgba(25,39,82,.9),rgba(7,13,31,.9))}
+.service-card:hover:before{transform:scale(1.6)}
+.service-icon{width:48px;height:48px;border-radius:15px;display:grid;place-items:center;font-size:22px;background:linear-gradient(140deg,#7b36ff,#287fe7);box-shadow:0 8px 24px #4d5cff30;margin-bottom:20px}
+.service-card h3{font-size:16px;margin-bottom:10px}.service-card p{font-size:12px;color:var(--muted);line-height:1.8}
+.arrow{position:absolute;right:20px;bottom:18px;color:var(--cyan);font-size:20px}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+.about-panel{border:1px solid var(--line);border-radius:25px;padding:30px;background:linear-gradient(145deg,#111d3bce,#090f24d9);position:relative;overflow:hidden}
+.about-panel:after{content:"";position:absolute;inset:auto -60px -100px auto;width:220px;height:220px;border-radius:50%;background:#5d37ff25;filter:blur(20px)}
+.about-panel h3{font-size:25px;line-height:1.3;margin:13px 0}
+.about-panel p,.about-copy p{font-size:14px;color:var(--muted);line-height:1.9}
+.metric-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:25px}
+.metric{padding:17px;border:1px solid #6785ff35;border-radius:15px;background:#101a36a8}.metric strong{font-size:25px;display:block;background:linear-gradient(90deg,#b56dff,#49e3ff);-webkit-background-clip:text;background-clip:text;color:transparent}.metric span{font-size:11px;color:#aebde0}
+.checks{list-style:none;display:grid;gap:15px;margin:24px 0}
+.checks li{display:flex;gap:12px;align-items:flex-start;color:#dce5fb;font-size:14px;line-height:1.6}
+.check{flex:none;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:#32e7c01c;color:#50f0c9;border:1px solid #32e7c05c;font-size:12px}
+.cta{padding:40px;border-radius:26px;border:1px solid #8a74ff55;background:radial-gradient(ellipse at 10% 10%,#6334b45c,transparent 45%),linear-gradient(110deg,#101a38,#10122d 65%,#102947);display:flex;align-items:center;justify-content:space-between;gap:24px;overflow:hidden;position:relative}
+.cta:after{content:"";position:absolute;width:280px;height:280px;border:1px solid #65a1ff25;border-radius:50%;right:10%;top:-170px;box-shadow:0 0 0 25px #65a1ff08,0 0 0 55px #65a1ff06}
+.cta h2{font-size:clamp(27px,3vw,38px);max-width:600px}.cta p{color:var(--muted);font-size:13px;line-height:1.8;max-width:600px}
+footer{padding:30px 0 40px;border-top:1px solid #7187ff20;color:#8f9fbe;font-size:12px}
+.footer-row{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.footer-links{display:flex;gap:20px}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .75s ease,transform .75s cubic-bezier(.2,.7,.2,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.delay-1{transition-delay:.1s}.delay-2{transition-delay:.2s}.delay-3{transition-delay:.3s}
+@keyframes float{0%,100%{translate:0 0}50%{translate:0 -15px}}
+@keyframes phoneFloat{0%,100%{transform:rotate(7deg) translateY(0)}50%{transform:rotate(4deg) translateY(-13px)}}
+@keyframes pulse{0%,100%{opacity:1;scale:1}50%{opacity:.45;scale:.75}}
+@keyframes bars{from{filter:brightness(.8);scale:1 .78;transform-origin:bottom}to{filter:brightness(1.4);scale:1 1;transform-origin:bottom}}
+@keyframes orbit{to{transform:rotate(360deg)}}
+@keyframes aurora{from{transform:translate3d(-2%,0,0) rotate(-8deg)}to{transform:translate3d(2%,2%,0) rotate(8deg)}}
+@media(max-width:900px){.nav-links{gap:16px}.nav-cta{display:none}.hero{grid-template-columns:1fr;padding-top:65px}.hero-copy{text-align:center}.hero-copy p{margin-left:auto;margin-right:auto}.hero-actions,.proof{justify-content:center}.visual{min-height:490px;margin-top:10px}.services{grid-template-columns:repeat(2,1fr)}.about-grid{gap:25px}}
+@media(max-width:650px){.wrap{width:min(100% - 30px,540px)}.nav{height:68px}.logo{font-size:25px}.menu-toggle{display:block}.nav-links{display:none;position:absolute;top:68px;left:0;right:0;padding:20px 24px 24px;background:rgba(5,8,23,.97);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:22px}.nav-links.open{display:flex}.hero{padding:55px 0 45px;gap:8px;min-height:auto}h1{font-size:43px;letter-spacing:-2.2px}.hero-copy p{font-size:14px}.visual{min-height:430px;transform:scale(.91);margin:-5px -20px 0}.phone{width:205px;height:375px}.float-icon{width:51px;height:51px;font-size:23px;border-radius:15px}.stat-card.left{left:0}.stat-card.right{right:0}.section{padding:68px 0}.services{grid-template-columns:1fr}.service-card{min-height:190px}.about-grid{grid-template-columns:1fr}.cta{padding:28px 23px;align-items:flex-start;flex-direction:column}.cta .btn{align-self:flex-start}.proof{font-size:11px}.footer-row{align-items:flex-start;flex-direction:column}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="site-bg"></div><div class="aurora"></div>
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#beranda" aria-label="NAR beranda"><span class="logo-mark">N</span><span>NAR</span></a>
+    <nav class="nav-links" id="navLinks" aria-label="Navigasi utama">
+      <a href="#beranda">Beranda</a><a href="#layanan">Layanan</a><a href="#tentang">Tentang Kami</a><a href="#kontak">Kontak</a>
+    </nav>
+    <a class="btn btn-primary nav-cta" href="#kontak">Mulai Sekarang <span>↗</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Buka menu" aria-expanded="false">☰</button>
+  </div>
+</header>
+<main>
+<section class="wrap hero" id="beranda">
+  <div class="hero-copy reveal visible">
+    <div class="eyebrow"><span class="pulse"></span> Partner Pertumbuhan Digital Kamu</div>
+    <h1>Tingkatkan Kehadiran Digitalmu Bersama <span class="gradient-text">NAR.</span></h1>
+    <p>Kami membantu brand, bisnis, dan kreator membangun kehadiran digital yang lebih kuat melalui strategi media sosial, engagement, dan digital marketing yang terarah.</p>
+    <div class="hero-actions"><a class="btn btn-primary" href="#kontak">Konsultasi Gratis <span>→</span></a><a class="btn btn-ghost" href="#layanan">Jelajahi Layanan <span>↓</span></a></div>
+    <div class="proof"><div class="avatars"><span class="avatar">N</span><span class="avatar">A</span><span class="avatar">R</span></div><div><div>Partner untuk pertumbuhan brand</div><div class="stars">★★★★★ <strong>Fokus pada hasil</strong></div></div></div>
+  </div>
+  <div class="visual" aria-label="Ilustrasi digital marketing NAR">
+    <div class="glow-orb"></div>
+    <div class="float-icon one" aria-hidden="true">◎</div><div class="float-icon two" aria-hidden="true">♪</div><div class="float-icon three" aria-hidden="true">♡</div><div class="float-icon four" aria-hidden="true">▶</div>
+    <div class="stat-card left"><small>Engagement</small><strong>↑ Terhubung</strong><span class="up">Interaksi yang bermakna</span></div>
+    <div class="phone"><div class="notch"></div><div class="phone-inner"><div class="phone-logo">NAR</div><div class="phone-tag">More Reach.<br>More Impact.</div><div class="mini-stat"><small>Digital growth</small><strong>In motion ✦</strong><div class="phone-bars"><i></i><i></i><i></i><i></i><i></i></div></div><div class="phone-tag" style="margin-top:17px">Strategi • Kreativitas • Hasil</div></div></div>
+    <div class="stat-card right"><small>Digital presence</small><strong>On the rise ↗</strong><span class="up">Strategi yang terarah</span></div>
+  </div>
+</section>
+<section class="section" id="layanan">
+  <div class="wrap">
+    <div class="section-head reveal"><div class="kicker">Layanan Kami</div><h2>Solusi Digital untuk <span class="gradient-text">Tumbuh Lebih Jauh</span></h2><p>Dari membangun identitas hingga menjangkau audiens yang tepat, NAR siap menjadi partner perjalanan digital kamu.</p></div>
+    <div class="services">
+      <article class="service-card reveal"><div class="service-icon">▣</div><h3>Social Media Management</h3><p>Kelola akun media sosial dengan perencanaan konten, kalender publikasi, dan identitas brand yang konsisten.</p><span class="arrow">↗</span></article>
+      <article class="service-card reveal delay-1"><div class="service-icon">✧</div><h3>Engagement Strategy</h3><p>Bangun interaksi yang relevan melalui pendekatan audiens, komunitas, dan strategi konten yang tepat.</p><span class="arrow">↗</span></article>
+      <article class="service-card reveal delay-2"><div class="service-icon">⌁</div><h3>Digital Marketing</h3><p>Rancang kampanye digital yang terukur untuk meningkatkan jangkauan, awareness, dan peluang konversi.</p><span class="arrow">↗</span></article>
+      <article class="service-card reveal delay-3"><div class="service-icon">◈</div><h3>Content Creation</h3><p>Produksi ide visual dan materi konten yang menarik, relevan, serta selaras dengan karakter brand.</p><span class="arrow">↗</span></article>
+    </div>
+  </div>
+</section>
+<section class="section" id="tentang">
+  <div class="wrap about-grid">
+    <div class="about-panel reveal"><div class="kicker">Kenapa NAR?</div><h3>Strategi kreatif. Eksekusi terarah. Pertumbuhan berkelanjutan.</h3><p>Kami percaya setiap brand punya cerita dan potensi. Tugas kami adalah membantu cerita itu menjangkau audiens yang tepat dengan pendekatan digital yang jelas dan konsisten.</p><div class="metric-grid"><div class="metric"><strong>01</strong><span>Strategi sesuai kebutuhan</span></div><div class="metric"><strong>02</strong><span>Komunikasi transparan</span></div><div class="metric"><strong>03</strong><span>Evaluasi berkala</span></div><div class="metric"><strong>∞</strong><span>Ide untuk terus berkembang</span></div></div></div>
+    <div class="about-copy reveal delay-1"><div class="kicker">Partner Digital Kamu</div><h2>Lebih dari sekadar <span class="gradient-text">tampil online.</span></h2><p>Kehadiran digital yang kuat dibangun lewat kombinasi pesan yang tepat, visual yang konsisten, dan pemahaman terhadap audiens.</p><ul class="checks"><li><span class="check">✓</span><span>Perencanaan yang menyesuaikan tujuan dan karakter bisnis.</span></li><li><span class="check">✓</span><span>Konten dan komunikasi yang menjaga identitas brand.</span></li><li><span class="check">✓</span><span>Evaluasi performa untuk menentukan langkah berikutnya.</span></li></ul><a class="btn btn-ghost" href="#kontak">Kenali kebutuhanmu <span>→</span></a></div>
+  </div>
+</section>
+<section class="section" id="kontak">
+  <div class="wrap"><div class="cta reveal"><div><div class="kicker">Saatnya Bertumbuh</div><h2>Punya target digital? <span class="gradient-text">Mari wujudkan bersama NAR.</span></h2><p>Ceritakan kebutuhan brand atau bisnismu. Kita mulai dengan diskusi singkat untuk menemukan strategi yang paling sesuai.</p></div><a class="btn btn-primary" href="mailto:hello@naragency.id?subject=Konsultasi%20NAR">Hubungi NAR <span>↗</span></a></div></div>
+</section>
+</main>
+<footer><div class="wrap footer-row"><a class="logo" href="#beranda"><span class="logo-mark">N</span><span>NAR</span></a><span>© <span id="year"></span> NAR Digital Growth Agency. Dibangun untuk bertumbuh.</span><div class="footer-links"><a href="#layanan">Layanan</a><a href="#tentang">Tentang</a><a href="#kontak">Kontak</a></div></div></footer>
+<script>
+const menuToggle=document.getElementById('menuToggle');
+const navLinks=document.getElementById('navLinks');
+menuToggle.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');menuToggle.setAttribute('aria-expanded',String(open));menuToggle.textContent=open?'✕':'☰'});
+navLinks.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{navLinks.classList.remove('open');menuToggle.setAttribute('aria-expanded','false');menuToggle.textContent='☰'}));
+document.getElementById('year').textContent=new Date().getFullYear();
+const revealObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');revealObserver.unobserve(entry.target)}})},{threshold:.13});
+document.querySelectorAll('.reveal:not(.visible)').forEach(el=>revealObserver.observe(el));
+// Gentle pointer glow movement on desktop
+if(matchMedia('(pointer:fine)').matches){document.addEventListener('pointermove',e=>{document.documentElement.style.setProperty('--mx',(e.clientX/window.innerWidth*100)+'%');document.documentElement.style.setProperty('--my',(e.clientY/window.innerHeight*100)+'%')},{passive:true})}
+</script>
+</body>
+</html>
